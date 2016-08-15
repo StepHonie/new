@@ -1,0 +1,15 @@
+extend ../layout
+
+block content
+  .container
+    .row
+      each item in movies
+        .col-md-2
+          //- .thumbnail
+            //- a(href="/second")
+            //-   img(src="http:", alt="#{item.name}")
+          .filepath
+            input(type='file')
+          .caption
+            h3 #{item.body}
+            p: a.btn.btn-primary(href="/admin/second", role="button") 观看预告片
